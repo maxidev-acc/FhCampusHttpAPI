@@ -1,0 +1,6 @@
+Erwin, Entron, 66777856, 100 , Dekan, 1
+John, Jubelkopf, 66770111, 600, Studienabteilungsleitung BIOINF25, 2
+Hanna, Hosenberg, 66779596, 200, Buecherei, 3
+Greta, Grunzig, 66770493, 300, Buecherei, 3
+Lisa, Lovegood, 66780302, 400, Fh-Shop, 4
+

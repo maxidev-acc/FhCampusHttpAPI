@@ -1,0 +1,3 @@
+BIOINF25, Bioinformatik-Master, 2025
+MACHINE23, Maschinenbau-Master, 2023
+ANALYT_CHEM23, AnalytischeChemie-Master, 2023

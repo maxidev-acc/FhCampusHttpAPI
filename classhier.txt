@@ -1,0 +1,57 @@
+void TestClassHierarchy()
+{
+    try
+    {
+        auto *pBioinf25 = new Jahrgang("Bioinformatik - Master", 2025);
+        pBioinf25->readStudents("BIONINF25_Studierende.txt");
+    }
+    catch(const FHException &ex)
+    {
+        std::cerr << ex.getMessage() << '\n';
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    
+
+    // wir können natürlich neue Instanzen von abgeleitete Klassen erzeugen.
+    // wir müssen uns aber an die angebotenen Konstruktoren halten.
+    auto *pS1 = new Studierender("Ernst", "A", "ABCS" , 123, "Bioinf025");
+    auto *pS2 = new Studierender("Sabine", "B","AAD",  345,"Bioinf025");
+
+    auto list = Person::getAllInstances();
+
+    // wir können auf den Instanzen Methoden aufrufen, die:
+    // nur in der abgeleiteten Klasse existieren,
+    // nur in der Basisklasse existieren,
+    // in der abgeleiteten Klasse überschrieben werden.
+    auto m1 = pS1->getMatrikelnummer();
+    pS1->setFamilyName("X");
+    auto name = pS1->toString();
+
+    // wir können auch Sammlungen von diesen Objekten anlegen und verwenden.
+    // (immer Pointer, da es ja identifizierbare Objekte sind und wir keine Kopien erzeugen wollen)
+    std::vector<Studierender *> students;
+    students.push_back(pS1);
+    students.push_back(pS2);
+    for (auto *pSt : students)
+        std::cout << pSt->toString() << std::endl;
+
+    // wir können auch mit Studenten arbeiten, wenn wir nur Pointer (oder Referenzen) auf den Basistype haben.
+    // Auch dann können wir die volle Funktionalität des ursprünglichen Types erhelten.
+    // ABER NUR über Funktione die virtual sind.
+    std::vector<Person *> personen;
+    personen.push_back(pS1);
+    personen.push_back(pS2);
+    for (auto *person :personen)
+        std::cout << person->toString() << std::endl;
+
+    // clean-up, kann auch über den Basis-Pointer erfolgen.
+    // deshalb ist es wichtig, dass der Destruktor eines Basistyps immer virtual ist.
+    students.clear();
+    for (auto *person :personen)
+        delete person;
+    personen.clear();
+}
+
