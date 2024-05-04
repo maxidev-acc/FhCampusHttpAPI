@@ -11,9 +11,6 @@
 
 using namespace Utility;
 
-/**
- * Hilfsfunktion um das nächste Attribut aus einer Zeile eines Comma-Separated-Filed zu holen.
-*/
 std::string Utility::readNextCSString(std::stringstream &ss)
 {
     std::string strField;
@@ -30,14 +27,6 @@ std::string Utility::readNextCSString(std::stringstream &ss)
 
 
 
-
-
-
-
-
-/**
- * Lies alle Studenten aus einer CSV-Datei ein
-*/
 void Utility::readStudents(const std::string &i_strFileName, std::vector<Studierender *>& o_students)
 {
     std::ifstream fStudents("data\\" + i_strFileName);
@@ -86,7 +75,7 @@ void Utility::readEmployees(const std::string &i_strFileName, std::vector<Angest
             if (strLine.empty())
                 continue;
             
-            // split up
+        
             std::stringstream ss(strLine);
             std::string firstName = readNextCSString(ss);
             std::string familyName = readNextCSString(ss);
@@ -120,7 +109,7 @@ void Utility::readJahrgang(const std::string &i_strFileName, std::vector<Jahrgan
             if (strLine.empty())
                 continue;
             
-            // split up
+     
             std::stringstream ss(strLine);
             std::string m_bezeichner = readNextCSString(ss);
             std::string ganze_bezeichung = readNextCSString(ss);

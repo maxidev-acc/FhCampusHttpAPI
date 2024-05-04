@@ -17,7 +17,7 @@ class Jahrgang
         ~Jahrgang();
         Jahrgang &operator=(const Jahrgang &i_src) = delete;
         // getter
-        const std::string &getName() const { return m_bezeichner; }
+        const std::string &getJahrgangName() const { return m_bezeichner; }
         int getJahr() const { return m_jahr; }
         Studierender *findStudent(long i_matrikelNummer) const;
 

@@ -5,7 +5,7 @@
 #include <map>
 
 
-// forward declaration anstelle eines Includes
+
 class Studierender;
 class Mitarbeiter; 
 class FH;
@@ -20,9 +20,7 @@ class REQUEST
         ~REQUEST();
         REQUEST &operator=(const REQUEST &i_src) = delete;
 
-        // getter
         const std::string getURL() const { return url; }
-        //Studierender *findStudent(long i_matrikelNummer) const;
         std::string returnPayload(std::string& url, FH& fh); 
         
        

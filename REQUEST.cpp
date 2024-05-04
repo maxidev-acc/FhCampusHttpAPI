@@ -10,7 +10,7 @@
 REQUEST::REQUEST(const std::string i_url)
   : url(i_url)
   
-{std::cout <<"New Request" <<std::endl;
+{
 };
 
 
