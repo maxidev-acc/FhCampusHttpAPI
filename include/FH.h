@@ -9,7 +9,7 @@ class FH
 {
     public:
 
-        FH(const std::string i_fh_name, const std::string i_type);
+        FH(const std::string& i_fh_name, const std::string& i_type);
         FH() = delete;
         FH(const FH &i_src) = delete;    
         ~FH();
@@ -18,17 +18,17 @@ class FH
 
 
         void dataConfiguration(const std::string& studentsFile, const std::string& jahrgaengeFile, const std::string& angestellteFile);
-        std::string getFHName() {return fh_name;};
-        std::string getFHType() {return type;};
-        std::string StudentAPIModell(std::string id);
-        std::string JahrgangAPIModell(std::string id);
-        std::string EmployeeAPIModell(std::string id);
-        std::string FhAPIModell();
+        const std::string getFHName() {return fh_name;};
+        const std::string getFHType() {return type;};
+        const std::string StudentAPIModell(const std::string& id);
+        const std::string JahrgangAPIModell(const std::string& id);
+        const std::string EmployeeAPIModell(const std::string& id);
+        const std::string FhAPIModell();
 
 
 
     private:
-        // ====================== private helper functions =============================
+        
 
     protected:
         // member variables

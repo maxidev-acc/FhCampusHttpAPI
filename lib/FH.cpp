@@ -4,11 +4,11 @@
 #include "Hilfsfunktionen.h"
 #include "FH.h"
 
-FH::FH(const std::string i_fh_name, const std::string i_type)
-  : fh_name(i_fh_name),
+    FH::FH(const std::string& i_fh_name, const std::string& i_type)
+        : fh_name(i_fh_name),
     type(i_type)
-{
-}
+    {
+    }
 
 
     void FH::dataConfiguration(const std::string& studentsFile, const std::string& jahrgaengeFile, const std::string& angestellteFile) {
@@ -27,23 +27,10 @@ FH::FH(const std::string i_fh_name, const std::string i_type)
                 };
             };
         }
-        //std::cout <<"Alle Daten wurden erstellt.";
-        //for (auto jahrgang : o_jahr){
-            //std::cout << jahrgang->getJahrgangName()<<std::endl;
-
-        //};
     }
 
 
-      
-
-
-        // ====================== public functions =============================
-        /**
-         * Eine Funktion, die auf die Teile eines Studierenden zugreift, ihn/sie aber nicht ändert.
-         */
-      
-        std::string FH:: StudentAPIModell(std::string id) {
+    const std::string FH:: StudentAPIModell(const std::string& id) {
             std::string payload = "";
             for (auto *studierender :o_students)
                 if(studierender->getID() == id) {
@@ -54,7 +41,7 @@ FH::FH(const std::string i_fh_name, const std::string i_type)
             return ("StudentAPIModell: Kein Datensatz gefunden!");};
 
 
-        std::string FH::JahrgangAPIModell(std::string id){
+    const std::string FH::JahrgangAPIModell(const std::string& id){
              
             std::vector<Studierender *> temp;
             for(auto jahrgang :o_jahr){
@@ -71,7 +58,7 @@ FH::FH(const std::string i_fh_name, const std::string i_type)
             
         };
 
-         std::string FH:: EmployeeAPIModell(std::string id) {
+    const std::string FH:: EmployeeAPIModell(const std::string& id) {
             std::string payload = "";
             for (auto *angestellter :o_angestellte)
                 if(angestellter->getID() == id) {
@@ -83,7 +70,7 @@ FH::FH(const std::string i_fh_name, const std::string i_type)
 
 
            
-        std::string FH:: FhAPIModell(){
+    const std::string FH:: FhAPIModell(){
             
             std::string payload = "{ name: " + this->getFHName() +  ", type:" + this->getFHType() + ", jahrgaenge: ["; 
             for (auto *i: o_jahr) {

@@ -64,15 +64,9 @@ void Utility::readStudents(const std::string &i_strFileName, std::vector<Studier
 
 
 void Utility::readEmployees(const std::string &i_strFileName, std::vector<Angestellter *>& o_angestellte)
-
-
-
 {
-
-
-
-    std::ifstream fStudents("..\\data\\" + i_strFileName);
-    if (fStudents.is_open())
+  std::ifstream fStudents("..\\data\\" + i_strFileName);
+  if (fStudents.is_open())
     {
         std::string strLine;
         while (!fStudents.eof())
@@ -121,7 +115,7 @@ void Utility::readJahrgang(const std::string &i_strFileName, std::vector<Jahrgan
             std::string m_bezeichner = readNextCSString(ss);
             std::string ganze_bezeichung = readNextCSString(ss);
             std::string i_jahr = readNextCSString(ss);
-            int jahr = 2025;
+            int jahr = 2024;
             auto *jahrgang = new Jahrgang(m_bezeichner, jahr);
             o_jahrgaenge.push_back(jahrgang);
            
