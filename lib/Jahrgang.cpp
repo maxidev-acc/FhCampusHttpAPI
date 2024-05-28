@@ -10,16 +10,13 @@ Jahrgang::Jahrgang(const std::string &i_bezeichner, int i_jahr)
 
 void Jahrgang::readStudents(const std::string &i_fileName)
 {
-   
-   // BIONF25
-   // read students
-   m_studenten.clear();
+      m_studenten.clear();
    Utility::readStudents(i_fileName, m_studenten);
 }
 
 Jahrgang::~Jahrgang()
 {
-    // we do not own Studierender, therefor we don't delete them
+
 }
 
 Studierender *Jahrgang::findStudent(long i_matrikelNummer) const

@@ -64,7 +64,13 @@ void Utility::readStudents(const std::string &i_strFileName, std::vector<Studier
 
 
 void Utility::readEmployees(const std::string &i_strFileName, std::vector<Angestellter *>& o_angestellte)
+
+
+
 {
+
+
+
     std::ifstream fStudents("..\\data\\" + i_strFileName);
     if (fStudents.is_open())
     {
@@ -127,18 +133,4 @@ void Utility::readJahrgang(const std::string &i_strFileName, std::vector<Jahrgan
 }
 
 
-
-
-
-
-void Utility::WriteStudents()
-{
-    std::ofstream fStudents("..\\data\\studierende2.txt");
-    if (fStudents.is_open())
-    {
-        fStudents << "\t" << "Max" << ",\t" << "Mustermann" << ",\t" << 31 << ",\t" << "2022345" << std::endl;
-
-        fStudents.close();        
-    }
-}
 

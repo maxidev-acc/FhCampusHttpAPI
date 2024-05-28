@@ -11,7 +11,7 @@ FH::FH(const std::string i_fh_name, const std::string i_type)
 }
 
 
-    void FH::setupData(const std::string& studentsFile, const std::string& jahrgaengeFile, const std::string& angestellteFile) {
+    void FH::dataConfiguration(const std::string& studentsFile, const std::string& jahrgaengeFile, const std::string& angestellteFile) {
         std::cout<<"FH-Instanz wird mit Daten gefüllt."<<std::endl;
         Utility::readStudents(studentsFile, o_students);
         Utility::readJahrgang(jahrgaengeFile, o_jahr);
@@ -27,11 +27,11 @@ FH::FH(const std::string i_fh_name, const std::string i_type)
                 };
             };
         }
-        std::cout <<"Alle Daten wurden erstellt.";
-        for (auto jahrgang : o_jahr){
-            std::cout << jahrgang->getJahrgangName()<<std::endl;
+        //std::cout <<"Alle Daten wurden erstellt.";
+        //for (auto jahrgang : o_jahr){
+            //std::cout << jahrgang->getJahrgangName()<<std::endl;
 
-        };
+        //};
     }
 
 

@@ -302,6 +302,26 @@ CTEST_SUBMIT_RETRY_DELAY:STRING=5
 //Maximum time allowed before CTest will kill the test.
 DART_TESTING_TIMEOUT:STRING=1500
 
+//Directory under which to collect all populated content
+FETCHCONTENT_BASE_DIR:PATH=C:/Users/maxim/Documents/GitHub/SoftwareEntwicklungC/build/_deps
+
+//Disables all attempts to download or update content and assumes
+// source dirs already exist
+FETCHCONTENT_FULLY_DISCONNECTED:BOOL=OFF
+
+//Enables QUIET option for all content population
+FETCHCONTENT_QUIET:BOOL=ON
+
+//When not empty, overrides where to find pre-populated content
+// for sqlite3
+FETCHCONTENT_SOURCE_DIR_SQLITE3:PATH=
+
+//Enables UPDATE_DISCONNECTED behavior for all content population
+FETCHCONTENT_UPDATES_DISCONNECTED:BOOL=OFF
+
+//Enables UPDATE_DISCONNECTED behavior just for population of sqlite3
+FETCHCONTENT_UPDATES_DISCONNECTED_SQLITE3:BOOL=OFF
+
 //Value Computed by CMake
 FhCampusHttpAPI_BINARY_DIR:STATIC=C:/Users/maxim/Documents/GitHub/SoftwareEntwicklungC/build
 
@@ -314,6 +334,9 @@ FhCampusHttpAPI_SOURCE_DIR:STATIC=C:/Users/maxim/Documents/GitHub/SoftwareEntwic
 //Path to a program.
 GITCOMMAND:FILEPATH=C:/Program Files/Git/cmd/git.exe
 
+//Git command line client
+GIT_EXECUTABLE:FILEPATH=C:/Program Files/Git/cmd/git.exe
+
 //Command to build the project
 MAKECOMMAND:STRING=C:/Program\ Files/CMake/bin/cmake.exe --build . --config "${CTEST_CONFIGURATION_TYPE}" -- -i
 
@@ -325,6 +348,27 @@ MEMORYCHECK_SUPPRESSIONS_FILE:FILEPATH=
 
 //Name of the computer/site where compile is being run
 SITE:STRING=DESKTOP-FLUBH57
+
+//Enable C++ 17
+SQLITE_ORM_ENABLE_CXX_17:BOOL=OFF
+
+//Enable C++ 20
+SQLITE_ORM_ENABLE_CXX_20:BOOL=OFF
+
+//Path to a file.
+SQLite3_INCLUDE_DIR:PATH=SQLite3_INCLUDE_DIR-NOTFOUND
+
+//Path to a library.
+SQLite3_LIBRARY:FILEPATH=SQLite3_LIBRARY-NOTFOUND
+
+//Value Computed by CMake
+sqlite_orm_BINARY_DIR:STATIC=C:/Users/maxim/Documents/GitHub/SoftwareEntwicklungC/build/_deps/sqlite3-build
+
+//Value Computed by CMake
+sqlite_orm_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+sqlite_orm_SOURCE_DIR:STATIC=C:/Users/maxim/Documents/GitHub/opencv
 
 
 ########################
@@ -521,6 +565,8 @@ CTEST_SUBMIT_RETRY_DELAY-ADVANCED:INTERNAL=1
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GITCOMMAND
 GITCOMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: GIT_EXECUTABLE
+GIT_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MAKECOMMAND
 MAKECOMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MEMORYCHECK_COMMAND
@@ -529,6 +575,10 @@ MEMORYCHECK_COMMAND-ADVANCED:INTERNAL=1
 MEMORYCHECK_SUPPRESSIONS_FILE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: SITE
 SITE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SQLite3_INCLUDE_DIR
+SQLite3_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SQLite3_LIBRARY
+SQLite3_LIBRARY-ADVANCED:INTERNAL=1
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 

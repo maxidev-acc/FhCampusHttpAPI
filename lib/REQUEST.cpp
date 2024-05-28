@@ -7,9 +7,14 @@
 
 
 
-REQUEST::REQUEST(const std::string i_url)
+REQUEST::REQUEST(const std::string &i_url)
   : url(i_url)
   
+{
+};
+
+
+REQUEST::~REQUEST()
 {
 };
 

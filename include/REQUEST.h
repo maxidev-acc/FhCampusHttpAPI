@@ -15,7 +15,7 @@ class REQUEST
     public:
         // 'structors
         REQUEST() = delete;
-        REQUEST(const std::string i_url);
+        REQUEST(const std::string &i_url);
         REQUEST(const REQUEST &i_src) = delete;    
         ~REQUEST();
         REQUEST &operator=(const REQUEST &i_src) = delete;

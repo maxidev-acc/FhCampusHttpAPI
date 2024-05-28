@@ -8,12 +8,16 @@
 class FH
 {
     public:
-     
+
         FH(const std::string i_fh_name, const std::string i_type);
-      
-    
-        void setupData(const std::string& studentsFile, const std::string& jahrgaengeFile, const std::string& angestellteFile);
-        
+        FH() = delete;
+        FH(const FH &i_src) = delete;    
+        ~FH();
+        FH &operator=(const FH &i_src) = delete;
+
+
+
+        void dataConfiguration(const std::string& studentsFile, const std::string& jahrgaengeFile, const std::string& angestellteFile);
         std::string getFHName() {return fh_name;};
         std::string getFHType() {return type;};
         std::string StudentAPIModell(std::string id);
