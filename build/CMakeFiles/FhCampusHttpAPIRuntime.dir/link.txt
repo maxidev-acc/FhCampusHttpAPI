@@ -1,3 +1,0 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\FhCampusHttpAPIRuntime.dir/objects.a
-C:\msys64\ucrt64\bin\ar.exe qc CMakeFiles\FhCampusHttpAPIRuntime.dir/objects.a @CMakeFiles\FhCampusHttpAPIRuntime.dir\objects1.rsp
-C:\msys64\ucrt64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\FhCampusHttpAPIRuntime.dir/objects.a -Wl,--no-whole-archive -o FhCampusHttpAPIRuntime.exe -Wl,--out-implib,libFhCampusHttpAPIRuntime.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\FhCampusHttpAPIRuntime.dir\linkLibs.rsp
