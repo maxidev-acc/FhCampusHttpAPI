@@ -46,7 +46,7 @@ int main() {
         res.set_content(json, "text/plain");
     });
 
-       svr.Get(R"(/info/(\d+))", [&fh_campus](const httplib::Request &req, httplib::Response &res) {
+       svr.Get(R"(/info/)", [&fh_campus](const httplib::Request &req, httplib::Response &res) {
         //auto numbers = req.matches[1];
         auto json = fh_campus->FhAPIModell();
         res.set_content(json, "text/plain");
